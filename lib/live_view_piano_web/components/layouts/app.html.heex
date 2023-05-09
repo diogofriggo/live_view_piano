@@ -1,0 +1,88 @@
+<header class="px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+    <div class="flex items-center gap-4">
+      <a href="/">
+        <img src={~p"/images/logo.svg"} width="36" />
+      </a>
+      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
+        v<%= Application.spec(:phoenix, :vsn) %>
+      </p>
+    </div>
+    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <a href="https://twitter.com/elixirphoenix" class="hover:text-zinc-700">
+        @elixirphoenix
+      </a>
+      <a href="https://github.com/phoenixframework/phoenix" class="hover:text-zinc-700">
+        GitHub
+      </a>
+      <a
+        href="https://hexdocs.pm/phoenix/overview.html"
+        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
+      >
+        Get Started <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="px-4 py-20 sm:px-6 lg:px-8">
+  <%!-- <div class="mx-auto max-w-2xl"> --%>
+  <div class="mx-auto">
+    <.flash_group flash={@flash} />
+    <h1 class="text-4xl font-bold text-center">Elixir/Phoenix Collaborative LiveView Piano!</h1>
+    <%= @inner_content %>
+    <div id="keyboard">
+      <div>
+        <div class="white first" id="C1" phx-hook="Piano" phx-value-note="C1">C1</div>
+      </div>
+      <div>
+        <div class="black" id="Db1" phx-hook="Piano" phx-value-note="Db1">Db1</div>
+        <div class="white" id="D1" phx-hook="Piano" phx-value-note="D1">D1</div>
+      </div>
+      <div>
+        <div class="black" id="Eb1" phx-hook="Piano" phx-value-note="Eb1">Eb1</div>
+        <div class="white" id="E1" phx-hook="Piano" phx-value-note="E1">E1</div>
+      </div>
+      <div>
+        <div class="white lone" id="F1" phx-hook="Piano" phx-value-note="F1">F1</div>
+      </div>
+      <div>
+        <div class="black" id="Gb1" phx-hook="Piano" phx-value-note="Gb1">Gb1</div>
+        <div class="white" id="G1" phx-hook="Piano" phx-value-note="G1">G1</div>
+      </div>
+      <div>
+        <div class="black" id="Ab1" phx-hook="Piano" phx-value-note="Ab1">Ab1</div>
+        <div class="white" id="A1" phx-hook="Piano" phx-value-note="A1">A1</div>
+      </div>
+      <div>
+        <div class="black" id="Bb1" phx-hook="Piano" phx-value-note="Bb1">Bb1</div>
+        <div class="white" id="B1" phx-hook="Piano" phx-value-note="B1">B1</div>
+      </div>
+      <div>
+        <div class="white lone" id="C2" phx-hook="Piano" phx-value-note="C2">C2</div>
+      </div>
+      <div>
+        <div class="black" id="Db2" phx-hook="Piano" phx-value-note="Db2">Db2</div>
+        <div class="white" id="D2" phx-hook="Piano" phx-value-note="D2">D2</div>
+      </div>
+      <div>
+        <div class="black" id="Eb2" phx-hook="Piano" phx-value-note="Eb2">Eb2</div>
+        <div class="white" id="E2" phx-hook="Piano" phx-value-note="E2">E2</div>
+      </div>
+      <div>
+        <div class="white lone" id="F2" phx-hook="Piano" phx-value-note="F2">F2</div>
+      </div>
+      <div>
+        <div class="black" id="Gb2" phx-hook="Piano" phx-value-note="Gb2">Gb2</div>
+        <div class="white" id="G2" phx-hook="Piano" phx-value-note="G2">G2</div>
+      </div>
+      <div>
+        <div class="black" id="Ab2" phx-hook="Piano" phx-value-note="Ab2">Ab2</div>
+        <div class="white" id="A2" phx-hook="Piano" phx-value-note="A2">A2</div>
+      </div>
+      <div>
+        <div class="black" id="Bb2" phx-hook="Piano" phx-value-note="Bb2">Bb2</div>
+        <div class="white" id="B2" phx-hook="Piano" phx-value-note="B2">B2</div>
+      </div>
+    </div>
+  </div>
+</main>
